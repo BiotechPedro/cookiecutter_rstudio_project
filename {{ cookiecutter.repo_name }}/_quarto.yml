@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "{{cookiecutter.project_name}}"
+  navbar:
+    background: light
+    title: "{{cookiecutter.project_name}}"
+    left:
+    - text: Home
+      href: index.html  
+
+format:
+  html:
+    author: "{{cookiecutter.author_name}}"
+    toc: yes
+    toc_float: yes
+    code_folding: hide
+    theme: 
+      light: [cosmo, theme.scss]
+    fig_caption: yes
+    df_print: paged
+    code-overflow: wrap
+    css: styles.css
+    number-sections: true
+    number-depth: 3
+    date: "`r format(Sys.time(), '%d %B, %Y')`"
+
+execute:
+  freeze: true
+
+editor: visual

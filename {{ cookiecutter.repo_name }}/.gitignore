@@ -1,0 +1,34 @@
+# Dot files
+.Rproj.user
+._*
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+.DS_Store
+.local
+.config
+.cache
+.Rproj.user
+.vscode-R
+.vscode-server
+rstudio-tmp
+.bash_history
+.radian_history
+.wget-hsts
+.vscode
+
+# Analysis figures
+analysis/figure
+analysis/*png
+analysis/*html
+analysis/*_cache
+analysis/site_libs
+
+# output form pipelines
+
+# rds files
+data/processed
+
+# Singularity
+singularity/
