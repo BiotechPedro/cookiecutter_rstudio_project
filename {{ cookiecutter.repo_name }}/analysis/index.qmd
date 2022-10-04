@@ -1,0 +1,7 @@
+---
+title: "Home"
+output:
+    toc: false
+---
+
+{{cookiecutter.description}}
