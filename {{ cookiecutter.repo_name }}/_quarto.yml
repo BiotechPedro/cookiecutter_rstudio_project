@@ -8,20 +8,21 @@ website:
     background: light
     title: "{{cookiecutter.project_name}}"
     left:
-    - text: Home
-      href: index.html  
+      - text: Home
+        href: index.qmd  
 
 format:
   html:
     author: "{{cookiecutter.author_name}}"
     toc: true
-    code-fold: false
+    code-fold: true
     code-tools: true
-    code-overflow: wrap
+    code-overflow: scroll
     fig-align: center
     fig-width: 6
     fig-height: 5
     fig-format: png
+    smooth-scroll: true
     theme: 
       light: [cosmo, theme.scss]
     df-print: paged

@@ -6,6 +6,6 @@ format:
 ---
 
 Description
-------------
+-----------
 
 {{cookiecutter.description}}
