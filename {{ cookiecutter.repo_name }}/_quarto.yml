@@ -14,20 +14,26 @@ website:
 format:
   html:
     author: "{{cookiecutter.author_name}}"
-    toc: yes
-    toc_float: yes
-    code_folding: hide
+    toc: true
+    code-fold: false
+    code-tools: true
+    code-overflow: wrap
+    fig-align: center
+    fig-width: 6
+    fig-height: 5
+    fig-format: png
     theme: 
       light: [cosmo, theme.scss]
-    fig_caption: yes
-    df_print: paged
-    code-overflow: wrap
+    df-print: paged
     css: styles.css
     number-sections: true
     number-depth: 3
-    date: "`r format(Sys.time(), '%d %B, %Y')`"
+    date: today
 
 execute:
-  freeze: true
+  freeze: auto
+  echo: true
+  error: false
+  warning: false
 
 editor: visual

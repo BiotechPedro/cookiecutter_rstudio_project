@@ -1,7 +1,11 @@
 ---
-title: "Home"
-output:
-    toc: false
+title: "Index"
+format:
+    html:
+      number-sections: false
 ---
+
+Description
+------------
 
 {{cookiecutter.description}}
