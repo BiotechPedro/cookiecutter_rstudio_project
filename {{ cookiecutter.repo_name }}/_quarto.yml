@@ -9,7 +9,7 @@ website:
     title: "{{cookiecutter.project_name}}"
     left:
       - text: Home
-        href: index.qmd  
+        href: index.html  
 
 format:
   html:
@@ -37,4 +37,4 @@ execute:
   error: false
   warning: false
 
-editor: visual
+editor: source
