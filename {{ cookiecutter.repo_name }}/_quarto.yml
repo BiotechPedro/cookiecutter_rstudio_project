@@ -1,6 +1,12 @@
 project:
   type: website
   output-dir: docs
+# Force index.qmd to render always first (first rendered document will be the quarto index file in docs)
+# Force render just analysis folder, otherwise quarto will try to render any rmd or qmd in the project (like vignettes)
+# Add any extra folders with qmd's that you would like to render also
+  render:
+    - analysis/index.qmd
+    - analysis
 
 website:
   title: "{{cookiecutter.project_name}}"
@@ -9,7 +15,7 @@ website:
     title: "{{cookiecutter.project_name}}"
     left:
       - text: Home
-        href: index.html  
+        href: index.qmd
 
 format:
   html:
@@ -36,5 +42,6 @@ execute:
   echo: true
   error: false
   warning: false
+  message: false
 
 editor: source
