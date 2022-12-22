@@ -12,11 +12,12 @@
 .Rproj.user
 .vscode-R
 .vscode-server
-rstudio-tmp
 .bash_history
 .radian_history
 .wget-hsts
 .vscode
+.conda
+/.quarto/
 
 # Analysis figures
 analysis/figure
@@ -32,3 +33,15 @@ data/processed
 
 # Singularity
 singularity/
+
+# tmp rstudio folder
+software/rstudio/rstudio-tmp
+
+# big files
+**/*.rds
+**/*.bam
+**/*.bai
+**/*.fastq
+**/*.fq
+**/*.fasta
+**/*.fa
