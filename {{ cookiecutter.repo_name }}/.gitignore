@@ -28,14 +28,15 @@ analysis/site_libs
 
 # output form pipelines
 
-# rds files
-data/processed
+# data folder
+data
 
 # Singularity
 singularity/
 
-# tmp rstudio folder
+# tmp rstudio folder and r packages
 software/rstudio/rstudio-tmp
+software/rstudio/Rstudio-*
 
 # big files
 **/*.rds
