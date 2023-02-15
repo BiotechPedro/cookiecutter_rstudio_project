@@ -15,7 +15,7 @@ website:
     title: "{{cookiecutter.project_name}}"
     left:
       - text: Home
-        href: index.qmd
+        href: analysis/index.qmd
 
 format:
   html:
