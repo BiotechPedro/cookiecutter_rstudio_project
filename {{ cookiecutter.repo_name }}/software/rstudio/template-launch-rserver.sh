@@ -4,19 +4,19 @@
 # DECLARE PATH VARIABLES
 #-------------------------------------------------------------------------
 # Paths to bind (for singularity exec command, --bind flag)
-bind_path="/path/to/bind"
+bind_path={{cookiecutter.path_to_bind}}
 
 # Path of the singularity image to run rstudio-server
-singularity_image="/path/to/image"
+singularity_image={{cookiecutter.path_to_image}}
 
 # Define home dir
-home="/path/to/home"
+home={{cookiecutter.project_home}}
 
 # IP of workstation/cluster to connect
-IP_WORKSTATION="ip.of.workstation"
+IP_WORKSTATION={{cookiecutter.ip_workstation}}
 
 # Define the path where R packages will be installed
-r_version="4.2.1"
+r_version={{cookiecutter.r_version}}
 rstudio_home="${home}/software/rstudio"
 
 
