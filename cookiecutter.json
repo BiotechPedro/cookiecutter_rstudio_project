@@ -5,7 +5,7 @@
     "description": "A short description of the project.",
     "path_to_bind": "/stemcell",
     "path_to_image": "/stemcell/scratch/dfernandezp/IndranilSingh/old_vs_young/singularity/rstudio_031022.sif",
-    "project_home": "`pwd`",
+    "rstudio_home": "`pwd`",
     "ip_workstation": "10.5.17.215",
     "r_version": "4.2.1"
 }
