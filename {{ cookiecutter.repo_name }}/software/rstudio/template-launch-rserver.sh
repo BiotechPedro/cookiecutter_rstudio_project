@@ -9,16 +9,15 @@ bind_path={{cookiecutter.path_to_bind}}
 # Path of the singularity image to run rstudio-server
 singularity_image={{cookiecutter.path_to_image}}
 
-# Define home dir
-home={{cookiecutter.project_home}}
-
 # IP of workstation/cluster to connect
 IP_WORKSTATION={{cookiecutter.ip_workstation}}
 
 # Define the path where R packages will be installed
 r_version={{cookiecutter.r_version}}
-rstudio_home="${home}/software/rstudio"
+rstudio_home={{cookiecutter.rstudio_home}}
 
+# Define project home dir
+project_home="../../${rstudio_home}"
 
 #-------------------------------------------------------------------------
 # CREATE RLIB FOLDER AND RENVIRON
@@ -28,11 +27,11 @@ mkdir -p ${r_packages}
 
 # User-installed R packages go into their custom home directory
 # Add also user-installed R packages into R_LIBS to force R to load those packages over those in the singularity image.
-if [ ! -e ${home}/.Renviron ]
+if [ ! -e ${project_home}/.Renviron ]
 then
   printf '\nNOTE: creating ~/.Renviron file\n\n'
-  echo "R_LIBS_USER=${r_packages}" >> ${home}/.Renviron
-  echo "R_LIBS=${r_packages}:/usr/local/lib/R/site-library:/usr/local/lib/R/library:/usr/lib/R/library" >> ${home}/.Renviron
+  echo "R_LIBS_USER=${r_packages}" >> ${project_home}/.Renviron
+  echo "R_LIBS=${r_packages}:/usr/local/lib/R/site-library:/usr/local/lib/R/library:/usr/lib/R/library" >> ${project_home}/.Renviron
 fi
 
 
@@ -103,7 +102,7 @@ export LC_ALL="en_US.UTF-8"
 # This example bind mounts the /hpcnfs directory on the host into the Singularity container.
 # By default the only host file systems mounted within the container are $HOME, /tmp, /proc, /sys, and /dev.
 singularity exec --cleanenv \
-   -H ${home} \
+   -H ${project_home} \
    --bind=${bind_path} \
    --bind="/home" \
    --bind="$TMPDIR/run:/run" \
