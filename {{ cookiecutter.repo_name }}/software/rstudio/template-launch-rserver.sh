@@ -17,7 +17,7 @@ r_version={{cookiecutter.r_version}}
 rstudio_home={{cookiecutter.rstudio_home}}
 
 # Define project home dir
-project_home="../../${rstudio_home}"
+project_home=$(echo ${rstudio_home} | sed 's/\/software\/rstudio//g')
 
 #-------------------------------------------------------------------------
 # CREATE RLIB FOLDER AND RENVIRON
