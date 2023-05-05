@@ -14,10 +14,10 @@ IP_WORKSTATION={{cookiecutter.ip_workstation}}
 
 # Define the path where R packages will be installed
 r_version={{cookiecutter.r_version}}
-rstudio_home={{cookiecutter.rstudio_home}}
+rstudio_home="{{cookiecutter.project_home}}/software/rstudio"
 
 # Define project home dir
-project_home=$(echo ${rstudio_home} | sed 's/\/software\/rstudio//g')
+project_home={{cookiecutter.project_home}}
 
 #-------------------------------------------------------------------------
 # CREATE RLIB FOLDER AND RENVIRON

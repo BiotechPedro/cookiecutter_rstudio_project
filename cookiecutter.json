@@ -1,11 +1,11 @@
 {
     "project_name": "project_name",
-    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "author_name": "Your name (or your organization/company/team)",
     "description": "A short description of the project.",
     "path_to_bind": "/stemcell",
     "path_to_image": "/stemcell/scratch/dfernandezp/IndranilSingh/old_vs_young/singularity/rstudio_031022.sif",
-    "rstudio_home": "import os; os.getcwd()",
     "ip_workstation": "10.5.17.215",
+    "project_home": "project_home",
     "r_version": "4.2.1"
 }

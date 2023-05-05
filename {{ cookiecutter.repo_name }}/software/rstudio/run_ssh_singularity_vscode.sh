@@ -4,18 +4,17 @@
 # DECLARE PATH VARIABLES
 #-------------------------------------------------------------------------
 # Paths to bind (for singularity exec command, --bind flag)
-bind_path="/path/to/bind"
+bind_path={{cookiecutter.path_to_bind}}
 
 # Path of the singularity image to run rstudio-server
-singularity_image="/path/to/image"
-
-# Define home dir
-home="/path/to/home"
+singularity_image={{cookiecutter.path_to_image}}
 
 # Define the path where R packages will be installed
-r_version="4.2.1"
-rstudio_home="${home}/software/rstudio"
+r_version={{cookiecutter.r_version}}
+rstudio_home="{{cookiecutter.project_home}}/software/rstudio"
 
+# Define project home dir
+project_home={{cookiecutter.project_home}}
 
 #-------------------------------------------------------------------------
 # CREATE RLIB FOLDER AND RENVIRON
