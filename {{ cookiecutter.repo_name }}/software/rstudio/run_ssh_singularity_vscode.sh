@@ -1,20 +1,24 @@
 #!/bin/sh
 
+# Load variables for bind_path, singularity_image, rstudio_home, project_home
+source ../../.project_settings.sh
+
 #-------------------------------------------------------------------------
 # DECLARE PATH VARIABLES
 #-------------------------------------------------------------------------
 # Paths to bind (for singularity exec command, --bind flag)
-bind_path={{cookiecutter.path_to_bind}}
+bind_path=${bind_path}
 
 # Path of the singularity image to run rstudio-server
-singularity_image={{cookiecutter.path_to_image}}
+singularity_image=${singularity_image}
 
 # Define the path where R packages will be installed
 r_version={{cookiecutter.r_version}}
-rstudio_home="{{cookiecutter.project_home}}/software/rstudio"
+rstudio_home=${rstudio_home}
 
 # Define project home dir
-project_home={{cookiecutter.project_home}}
+project_home=${project_path}
+
 
 #-------------------------------------------------------------------------
 # CREATE RLIB FOLDER AND RENVIRON
