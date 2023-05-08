@@ -17,7 +17,7 @@ r_version={{cookiecutter.r_version}}
 rstudio_home=${rstudio_home}
 
 # Define project home dir
-project_home=${project_path}
+project_home=${project_home}
 
 
 #-------------------------------------------------------------------------
