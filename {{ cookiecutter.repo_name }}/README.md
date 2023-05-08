@@ -6,21 +6,25 @@
 Project Organization
 --------------------
 
-    ├── analysis                           <- qmd files containing the code for the analyses. Naming convention is a number (for ordering) with a short (`-` delimited) description, e.g. `01-Exploratory-Analysis.qmd`. 
-    │   └── index.qmd
-    ├── code                               <- Non-R scripts that will be used in this project
-    ├── {{ cookiecutter.repo_name }}.Rproj <- Create Rstudio project
-    ├── data                               <- Any kind of data (raw, processed, output from pipelines, etc) that will be used for the project
-    ├── docs                               <- Rendered html reports of qmd files
-    ├── misc                               <- Other files
-    ├── output                             <- Output plots and files from qmd files
-    ├── _quarto.yml                        <- Configuration of Quarto settings, html display, webpage, etc.
-    ├── README.md                          <- The top-level README for developers using this project.
-    ├── src                                <- Source code for use in this project (R)
-    ├── styles.css                         <- CSS file to style the webpage
-    └── theme.scss                         <- SCSS file to style the webpage
-
-
+    ├── analysis                                <- qmd files containing the code for the analyses. Naming convention is a number (for ordering) with a short (`-` delimited) description, e.g. `01-Exploratory-Analysis.qmd`. 
+    │   └── index.qmd
+    ├── code                                    <- Non-R scripts that will be used in this project.
+    │   ├── Makefile                            <- Makefile to automatically run quarto_render in the background.
+    │   └── singularity_exec.sh                 <- Bash script executed by the Makefile to run quarto_render with singularity
+    ├── {{ cookiecutter.repo_name }}.Rproj      <- Create Rstudio project
+    ├── data                                    <- Any kind of data (raw, processed, output from pipelines, etc) that will be used for the project
+    ├── docs                                    <- Rendered html reports of qmd files
+    ├── misc                                    <- Other files
+    ├── output                                  <- Output plots and files from qmd files
+    ├── _quarto.yml                             <- Configuration of Quarto settings, html display, webpage, etc.
+    ├── README.md                               <- The top-level README for developers using this project.
+    ├── software                                <- Folder in which to install software/packages used for the project that are outside the singularity image.
+    │   └── rstudio
+    │       ├── launch-rserver.sh               <- Script to launch rstudio-server from a remote machine (such as a workstation).
+    │       └── run_ssh_singularity_vscode.sh   <- Script to work inside the singularity image from vscode. It allows to work in R/python/whatever without rstudio-server.
+    ├── src                                     <- Source code for use in this project (R)
+    ├── styles.css                              <- CSS file to style the webpage
+    └── theme.scss                              <- SCSS file to style the webpage
 
 Usage
 -----
