@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Load variables for bind_path, singularity_image, IP_WORKSTATION, rstudio_home, project_home
+cd "${0%/*}" # Move to which this script is located. Required for the source command to work always
 source ../../.project_settings.sh
 
 #-------------------------------------------------------------------------
