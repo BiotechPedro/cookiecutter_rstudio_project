@@ -4,7 +4,7 @@
     "author_name"   : "Your name (or your organization/company/team)",
     "description"   : "A short description of the project.",
     "path_to_bind"  : "/stemcell",
-    "path_to_image" : "/stemcell/data/Singularity_images/RstudioServer/rstudio_031022.sif",
+    "path_to_image" : "/stemcell/data/Singularity_images/RstudioServer/rstudio_050224.sif",
     "ip_workstation": "10.5.17.215",
-    "r_version"     : "4.2.1"
+    "r_version"     : "4.3.2"
 }
