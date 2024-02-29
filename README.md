@@ -18,4 +18,4 @@ $ conda install cookiecutter
 ### To start a new project, run:
 --------------------------------
 
-    cookiecutter https://github.com/dfernandezperez/cookiecutter_rstudio_project
+    cookiecutter https://github.com/BiotechPedro/cookiecutter_rstudio_project
